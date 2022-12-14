@@ -19,5 +19,5 @@ from Chemical_Info_Website.views import index, chemical_list, chemical_addition
 urlpatterns = [
     path('Chemical_Info_Website/smiles/<str:smiles>/', chemical_list, name='BP_get'),
     path('Chemical_Info_Website/add_chemical', chemical_addition, name='adding_chem'),
-    path('Chemical_Info_Website/chemweb', index, name='index'),
+    path('Chemical_Info_Website/chemweb/<str:name>/', index, name='index'),
 ]
